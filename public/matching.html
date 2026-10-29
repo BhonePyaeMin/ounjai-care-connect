@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Care Matching — OunJai Health Services</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main" class="container" tabindex="-1">
+    <div class="page-head">
+      <div>
+        <h1>AI Care Matching &amp; Dashboard</h1>
+        <p>Matching care needs with verified caregivers, with a score you can inspect.</p>
+      </div>
+      <a class="btn" href="/tracking">Proceed to Booking &amp; Tracking <span id="arrow"></span></a>
+    </div>
+
+    <form id="match-form" class="card" style="margin-bottom:1.25rem">
+      <div class="filters">
+        <div class="field wide">
+          <label for="f-text">Describe the care needed</label>
+          <input id="f-text" class="input" maxlength="1000" placeholder="e.g. grandmother with dementia who needs help walking" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="f-category">Service</label>
+          <select id="f-category" class="input"><option value="">Any service</option></select>
+        </div>
+        <div class="field">
+          <label for="f-location">Care location</label>
+          <select id="f-location" class="input"></select>
+        </div>
+        <div class="field">
+          <label for="f-date">Preferred date &amp; time</label>
+          <input id="f-date" type="datetime-local" class="input">
+        </div>
+        <div class="field">
+          <label for="f-fee">Max fee (฿ per hour)</label>
+          <input id="f-fee" type="number" min="50" max="10000" step="10" class="input" placeholder="No limit">
+        </div>
+        <div class="field">
+          <label class="checkbox" style="margin-top:1.6rem"><input type="checkbox" id="f-verified"> Verified caregivers only</label>
+        </div>
+        <div class="field" style="align-self:end">
+          <button class="btn" type="submit">Find matches</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="split">
+      <aside class="card" aria-labelledby="analysis-title" id="analysis-card">
+        <div class="row between">
+          <h2 id="analysis-title">AI Analysis</h2>
+          <span class="badge" id="strength">Waiting</span>
+        </div>
+        <div id="needs" class="cg-tags"></div>
+        <h3 class="small" style="margin-top:1rem">Insights summary</h3>
+        <p class="small muted" id="insights">Enter a description to see the needs the system detects.</p>
+        <details class="why" style="margin-top:1rem">
+          <summary>How the match score works</summary>
+          <ul>
+            <li>Skills 40 · Service type 15 · Distance 15</li>
+            <li>Rating 10 (smoothed) · Availability 10</li>
+            <li>Experience 5 · Budget 5</li>
+          </ul>
+          <p class="xsmall muted" style="margin-top:.4rem">Scores are computed by transparent rules, not a black box, so every recommendation can be explained.</p>
+        </details>
+      </aside>
+
+      <section aria-labelledby="results-title">
+        <div class="row between" style="margin-bottom:.8rem">
+          <h2 id="results-title" style="font-size:1.2rem">Top AI-Recommended Caregivers</h2>
+          <span class="small muted" id="count"></span>
+        </div>
+        <div id="results" class="stack" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/js/pages/matching.js"></script>
+</body>
+</html>

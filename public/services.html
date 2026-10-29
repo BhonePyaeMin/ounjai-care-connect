@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services &amp; AI Assistant — OunJai Health Services</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main" class="container" tabindex="-1">
+    <div class="page-head">
+      <div>
+        <h1>Services</h1>
+        <p>Health &amp; rehabilitation care for every stage of life.</p>
+      </div>
+    </div>
+
+    <section class="grid cols-4" id="services" aria-label="Service categories"></section>
+
+    <section id="assistant" class="split right-narrow" style="margin-top:2rem" aria-labelledby="assistant-title">
+      <div class="card">
+        <div class="row between">
+          <h2 id="assistant-title">AI Symptom Assistant</h2>
+          <span class="row">
+            <span class="badge" id="engine-badge">Rule-based triage</span>
+            <button class="btn ghost sm" type="button" id="reset-btn">New case</button>
+          </span>
+        </div>
+        <div class="callout info" style="margin:.6rem 0">
+          <span id="info-ico"></span>
+          <p class="small">This assistant helps you decide <strong>where and how fast</strong> to seek care. It is not a diagnosis. In an emergency call <a href="tel:1669"><strong>1669</strong></a>.</p>
+        </div>
+        <div class="chat">
+          <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Conversation"></div>
+          <form class="chat-form" id="chat-form">
+            <label class="sr-only" for="chat-input">Describe the symptoms</label>
+            <input id="chat-input" class="input" maxlength="1000" autocomplete="off" placeholder="Describe symptoms, age and conditions (English or ไทย)…">
+            <button class="btn" type="submit" id="chat-send" aria-label="Send"><span id="send-ico"></span></button>
+          </form>
+        </div>
+      </div>
+      <aside class="card">
+        <h2>Try an example</h2>
+        <div class="stack">
+          <button class="chip" type="button" data-example="My grandmother is 74 years old with diabetes. She has been dizzy since this morning and her temperature is 38.2 °C.">Dizzy grandmother with fever</button>
+          <button class="chip" type="button" data-example="My father is 80 years old and has chest pain and is short of breath.">Chest pain and breathlessness</button>
+          <button class="chip" type="button" data-example="คุณยายอายุ 78 ปี หกล้มในห้องน้ำ ยืนไม่ได้">หกล้ม ยืนไม่ได้ (Thai)</button>
+          <button class="chip" type="button" data-example="My 4 year old has a mild cough and a runny nose, no fever.">Child with a mild cough</button>
+        </div>
+        <p class="notice" style="margin-top:1rem">Messages are used only to produce this answer. Only the urgency level is logged (no text, no name) to improve the service. See the <a href="/privacy">privacy notice</a>.</p>
+      </aside>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/js/pages/services.js"></script>
+</body>
+</html>

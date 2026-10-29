@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency Support — OunJai Health Services</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main" class="container" tabindex="-1">
+    <div class="page-head">
+      <div>
+        <h1>Emergency Support</h1>
+        <p>Quick access to emergency numbers and your trusted contacts.</p>
+      </div>
+    </div>
+
+    <section class="grid cols-3" aria-label="Emergency hotlines">
+      <article class="card hotline">
+        <div><strong class="num">1669</strong><div class="small muted">Emergency medical service (24h)</div></div>
+        <a class="btn danger" href="tel:1669">Call</a>
+      </article>
+      <article class="card hotline">
+        <div><strong class="num" style="color:var(--foreground)">191</strong><div class="small muted">Police</div></div>
+        <a class="btn secondary" href="tel:191">Call</a>
+      </article>
+      <article class="card hotline">
+        <div><strong class="num" style="color:var(--foreground)">1323</strong><div class="small muted">Mental health hotline (24h)</div></div>
+        <a class="btn secondary" href="tel:1323">Call</a>
+      </article>
+    </section>
+
+    <section class="split right-narrow" style="margin-top:1.5rem">
+      <div class="card" aria-labelledby="contacts-title">
+        <h2 id="contacts-title">Emergency contacts</h2>
+        <p class="small muted">People who would be alerted if you press SOS (up to 5).</p>
+        <div id="contacts-gate"></div>
+        <ul id="contacts" style="list-style:none;padding:0;margin:.8rem 0" class="stack"></ul>
+        <form id="contact-form" class="form-grid hidden" novalidate>
+          <div class="field"><label for="c-name">Name</label><input id="c-name" class="input" maxlength="80" required></div>
+          <div class="field"><label for="c-phone">Phone</label><input id="c-phone" class="input" inputmode="tel" placeholder="08x-xxx-xxxx" required></div>
+          <div class="field"><label for="c-rel">Relationship</label><input id="c-rel" class="input" maxlength="40" placeholder="Daughter, neighbour…"></div>
+          <div class="field" style="align-self:end"><button class="btn" type="submit">Add contact</button></div>
+          <p class="full error-text" id="contact-err" role="alert"></p>
+        </form>
+      </div>
+      <aside class="card" aria-labelledby="sos-title">
+        <h2 id="sos-title">SOS alert</h2>
+        <p class="small muted" style="margin-bottom:1rem">Records an alert and notifies your saved contacts. Works without signing in, but then no contacts can be notified.</p>
+        <button class="btn danger block" type="button" id="sos-btn"></button>
+        <p class="notice" style="margin-top:1rem">Prototype notice: alerts are logged but no SMS or push messages are sent yet. Always call 1669 in a real emergency.</p>
+      </aside>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/js/pages/emergency.js"></script>
+</body>
+</html>

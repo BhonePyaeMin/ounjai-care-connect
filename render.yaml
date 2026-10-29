@@ -1,0 +1,19 @@
+# Render Blueprint: New + > Blueprint > pick the GitHub repo. Creates the service below.
+# The free plan has no persistent disk, so the database resets on every restart or redeploy.
+# That is fine for a demo (sample caregivers and campaigns are re-created); do not store real data.
+services:
+  - type: web
+    name: ounjai-care-connect
+    runtime: node
+    plan: free
+    buildCommand: echo "no build step - no dependencies"
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: OUNJAI_TRUST_PROXY
+        value: "1"
+      - key: OUNJAI_PUBLIC_DEMO
+        value: "1"

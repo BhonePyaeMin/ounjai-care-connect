@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in — OunJai Health Services</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main" class="container" tabindex="-1" style="max-width:34rem">
+    <div class="card">
+      <div class="row" role="tablist" aria-label="Account">
+        <button class="chip" type="button" role="tab" id="tab-login" aria-selected="true" aria-controls="panel-login" aria-pressed="true">Sign in</button>
+        <button class="chip" type="button" role="tab" id="tab-register" aria-selected="false" aria-controls="panel-register" aria-pressed="false">Create account</button>
+      </div>
+
+      <form id="panel-login" role="tabpanel" aria-labelledby="tab-login" class="stack" style="margin-top:1rem" novalidate>
+        <div class="field"><label for="l-email">Email</label><input id="l-email" class="input" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="l-pass">Password</label><input id="l-pass" class="input" type="password" autocomplete="current-password" required></div>
+        <p class="error-text" id="l-err" role="alert"></p>
+        <button class="btn block" type="submit">Sign in</button>
+      </form>
+
+      <form id="panel-register" role="tabpanel" aria-labelledby="tab-register" class="stack hidden" style="margin-top:1rem" novalidate>
+        <div class="field"><label for="r-name">Full name</label><input id="r-name" class="input" maxlength="80" autocomplete="name" required></div>
+        <div class="field"><label for="r-email">Email</label><input id="r-email" class="input" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="r-phone">Phone (optional)</label><input id="r-phone" class="input" inputmode="tel" autocomplete="tel" placeholder="08x-xxx-xxxx"></div>
+        <div class="field"><label for="r-pass">Password</label><input id="r-pass" class="input" type="password" autocomplete="new-password" required><span class="hint">At least 8 characters with a letter and a number.</span></div>
+        <label class="checkbox"><input type="checkbox" id="r-consent"><span>I have read the <a href="/privacy" target="_blank" rel="noopener">privacy notice</a> and consent to OunJai processing my personal data as described (PDPA).</span></label>
+        <p class="error-text" id="r-err" role="alert"></p>
+        <button class="btn block" type="submit">Create account</button>
+      </form>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/js/pages/login.js"></script>
+</body>
+</html>

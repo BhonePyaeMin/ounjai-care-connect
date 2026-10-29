@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking &amp; Live Tracking — OunJai Health Services</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main" class="container" tabindex="-1">
+    <div class="page-head">
+      <div>
+        <h1>Booking Confirmation &amp; Care Tracking</h1>
+        <p>Monitor appointments, caregiver arrival and emergency support tools.</p>
+      </div>
+      <a class="btn secondary" href="/matching">Book another caregiver</a>
+    </div>
+    <div id="gate"></div>
+    <div id="picker" class="booking-pick" role="group" aria-label="Your bookings"></div>
+    <div id="detail" class="split right-narrow hidden">
+      <div class="stack">
+        <section class="card" aria-labelledby="bk-title">
+          <div class="row between">
+            <div>
+              <small class="muted" id="bk-id"></small>
+              <h2 id="bk-title" style="font-size:1.25rem;margin:0"></h2>
+            </div>
+            <span class="badge" id="bk-status"></span>
+          </div>
+          <div class="kv">
+            <div><small>Date &amp; Time</small><strong id="bk-when"></strong></div>
+            <div><small>Assigned Caregiver</small><strong id="bk-cg"></strong></div>
+            <div><small>Care Recipient</small><strong id="bk-recipient"></strong></div>
+            <div><small>Address</small><strong id="bk-addr"></strong></div>
+            <div><small>Duration &amp; fee</small><strong id="bk-fee"></strong></div>
+          </div>
+        </section>
+        <section class="card" aria-labelledby="map-title">
+          <div class="row between" style="margin-bottom:.6rem">
+            <h2 id="map-title" style="margin:0">Live Transit Tracking</h2>
+            <span class="badge" id="trip-badge"></span>
+          </div>
+          <div id="map-wrap" style="position:relative">
+            <svg id="map" class="map" viewBox="0 0 640 360" role="img" aria-label="Map showing the caregiver's route to the care address"></svg>
+            <div style="position:absolute;left:.8rem;bottom:.8rem"><span class="eta-pill" id="eta"></span></div>
+          </div>
+          <div class="progress" style="margin-top:.8rem" role="progressbar" aria-label="Trip progress" aria-valuemin="0" aria-valuemax="100" id="prog"><div id="prog-bar" style="width:0"></div></div>
+          <p class="xsmall muted" style="margin-top:.5rem">Simulated GPS: this prototype has no live caregiver location feed. The position is estimated from distance and travel time.</p>
+          <div class="row" style="margin-top:.6rem" id="demo-row"></div>
+        </section>
+        <section class="card hidden" id="feedback-card" aria-labelledby="fb-title">
+          <h2 id="fb-title">How was the service?</h2>
+          <div id="feedback-body"></div>
+        </section>
+      </div>
+      <aside class="card" aria-labelledby="tb-title" style="position:sticky;top:5rem">
+        <h2 id="tb-title">Quick Action Toolbar</h2>
+        <p class="small muted" style="margin-bottom:1rem">Instant communication and emergency protocols for peace of mind.</p>
+        <div class="stack">
+          <a class="btn block" id="call-btn" href="#"></a>
+          <button class="btn danger block" type="button" id="sos-btn"></button>
+          <button class="btn secondary block" type="button" id="support-btn"></button>
+          <button class="btn ghost block hidden" type="button" id="cancel-btn">Cancel this booking</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/js/pages/tracking.js"></script>
+</body>
+</html>

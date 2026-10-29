@@ -1,0 +1,857 @@
+{
+  "generatedAt": "2026-10-29T22:18:32.600Z",
+  "node": "v24.16.0",
+  "triage": {
+    "cases": 38,
+    "exactMatch": 38,
+    "exactMatchRate": 1,
+    "underTriage": 0,
+    "overTriage": 0,
+    "emergencyCases": 14,
+    "emergencyRecall": 1,
+    "falseEmergencies": 0,
+    "falselyReassured": 0,
+    "unclear": 0,
+    "confusion": {
+      "self-care": {
+        "self-care": 8,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "routine": {
+        "self-care": 0,
+        "routine": 5,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "unclear": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "urgent": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 11,
+        "emergency": 0
+      },
+      "emergency": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 14
+      }
+    },
+    "mismatches": [],
+    "rows": [
+      {
+        "text": "My father is 80 and has chest pain and is sweating",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "She suddenly cannot speak properly and her face is drooping",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "He is unconscious and not breathing normally",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "My mother cannot breathe, she is gasping",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "My 2 month old baby has a fever of 38.5",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "Grandfather had a seizure this morning",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "She is vomiting blood",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "คุณพ่อเจ็บหน้าอกและหายใจไม่ออก",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "He fell and hit his head, now he is very sleepy and vomiting",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "I want to end my life",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "My toddler swallowed poison",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "Heavy bleeding from the wound that will not stop",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "He is choking on food",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "ปู่หมดสติ",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "My grandmother is 78 years old, fell in the bathroom and cannot stand",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 55,
+        "result": "match"
+      },
+      {
+        "text": "70 years old with a fever of 39.2 C",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 55,
+        "result": "match"
+      },
+      {
+        "text": "She keeps vomiting and cannot keep fluids down",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 35,
+        "result": "match"
+      },
+      {
+        "text": "Blood pressure 195/115 and a severe headache",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 50,
+        "result": "match"
+      },
+      {
+        "text": "Blood sugar 380 and feeling very weak",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 43,
+        "result": "match"
+      },
+      {
+        "text": "He is 75 years old and very short of breath when walking",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 50,
+        "result": "match"
+      },
+      {
+        "text": "Black stool and dizziness, 68 years old",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 60,
+        "result": "match"
+      },
+      {
+        "text": "Sudden confusion in my 82-year-old grandmother",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 45,
+        "result": "match"
+      },
+      {
+        "text": "อายุ 72 ปี ไข้สูง",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 55,
+        "result": "match"
+      },
+      {
+        "text": "She hit her head on the table but is acting normally",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 35,
+        "result": "match"
+      },
+      {
+        "text": "The wound is red and swollen with pus",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 35,
+        "result": "match"
+      },
+      {
+        "text": "My 4 year old has a mild cough, no fever",
+        "expected": "routine",
+        "predicted": "routine",
+        "score": 15,
+        "result": "match"
+      },
+      {
+        "text": "Grandfather 75 has had mild back pain for a week",
+        "expected": "routine",
+        "predicted": "routine",
+        "score": 20,
+        "result": "match"
+      },
+      {
+        "text": "My 68 year old mother with diabetes has been a little dizzy",
+        "expected": "routine",
+        "predicted": "routine",
+        "score": 34,
+        "result": "match"
+      },
+      {
+        "text": "My 3 year old has had diarrhea since yesterday",
+        "expected": "routine",
+        "predicted": "routine",
+        "score": 20,
+        "result": "match"
+      },
+      {
+        "text": "She is 80 years old, not eating much and constipated",
+        "expected": "routine",
+        "predicted": "routine",
+        "score": 26,
+        "result": "match"
+      },
+      {
+        "text": "I feel fine, just checking",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      },
+      {
+        "text": "no fever, no cough, no pain",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      },
+      {
+        "text": "A little tired after gardening, I am 40 years old",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 8,
+        "result": "match"
+      },
+      {
+        "text": "Slight headache after reading",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 10,
+        "result": "match"
+      },
+      {
+        "text": "ไม่มีไข้ ไม่เจ็บหน้าอก",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      },
+      {
+        "text": "Father had a stroke two years ago and is stable, no new symptoms",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      },
+      {
+        "text": "My grandfather has heart failure but is doing fine today",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      },
+      {
+        "text": "A sore throat for two days",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 8,
+        "result": "match"
+      }
+    ]
+  },
+  "heldout": {
+    "cases": 16,
+    "exactMatch": 15,
+    "exactMatchRate": 0.9375,
+    "underTriage": 1,
+    "overTriage": 0,
+    "emergencyCases": 8,
+    "emergencyRecall": 1,
+    "falseEmergencies": 0,
+    "falselyReassured": 0,
+    "unclear": 0,
+    "confusion": {
+      "self-care": {
+        "self-care": 2,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "routine": {
+        "self-care": 1,
+        "routine": 1,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "unclear": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "urgent": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 4,
+        "emergency": 0
+      },
+      "emergency": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 8
+      }
+    },
+    "mismatches": [
+      {
+        "text": "My 6 year old has a runny nose and coughs a bit at night",
+        "expected": "routine",
+        "predicted": "self-care",
+        "score": 10,
+        "result": "under-triage"
+      }
+    ],
+    "rows": [
+      {
+        "text": "Dad says his chest feels very tight and his left arm hurts",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "My wife is having trouble breathing and her lips look blue",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "He collapsed in the kitchen and isn't responding",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "Grandma's speech is all garbled and one side of her mouth is hanging down",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "She took a whole bottle of her pills",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "My baby, 5 weeks old, feels very hot",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "He's bleeding a lot and it won't stop",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "I don't want to live anymore",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "Granny, 79, slipped and now her hip hurts too much to walk",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 55,
+        "result": "match"
+      },
+      {
+        "text": "He has had a fever for three days and he is 71",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 35,
+        "result": "match"
+      },
+      {
+        "text": "Her blood pressure is 200 over 120",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 40,
+        "result": "match"
+      },
+      {
+        "text": "My uncle, 66, has been peeing blood",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 35,
+        "result": "match"
+      },
+      {
+        "text": "My 6 year old has a runny nose and coughs a bit at night",
+        "expected": "routine",
+        "predicted": "self-care",
+        "score": 10,
+        "result": "under-triage"
+      },
+      {
+        "text": "Mum, 70, has had knee pain when climbing stairs",
+        "expected": "routine",
+        "predicted": "routine",
+        "score": 15,
+        "result": "match"
+      },
+      {
+        "text": "We are fine, just want a caregiver for company",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      },
+      {
+        "text": "He is 85 and in good health, only needs help with shopping",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      }
+    ]
+  },
+  "fresh": {
+    "cases": 14,
+    "exactMatch": 9,
+    "exactMatchRate": 0.6428571428571429,
+    "underTriage": 4,
+    "overTriage": 1,
+    "emergencyCases": 8,
+    "emergencyRecall": 0.625,
+    "falseEmergencies": 0,
+    "falselyReassured": 0,
+    "unclear": 4,
+    "confusion": {
+      "self-care": {
+        "self-care": 1,
+        "routine": 0,
+        "unclear": 1,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "routine": {
+        "self-care": 0,
+        "routine": 1,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "unclear": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 0,
+        "urgent": 0,
+        "emergency": 0
+      },
+      "urgent": {
+        "self-care": 0,
+        "routine": 1,
+        "unclear": 0,
+        "urgent": 2,
+        "emergency": 0
+      },
+      "emergency": {
+        "self-care": 0,
+        "routine": 0,
+        "unclear": 3,
+        "urgent": 0,
+        "emergency": 5
+      }
+    },
+    "mismatches": [
+      {
+        "text": "She has been clutching her chest and says it feels like an elephant is sitting on it",
+        "expected": "emergency",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "under-triage"
+      },
+      {
+        "text": "Grandmother's lips are turning blue and she is struggling for air",
+        "expected": "emergency",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "under-triage"
+      },
+      {
+        "text": "He drank a bottle of cleaning liquid",
+        "expected": "emergency",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "under-triage"
+      },
+      {
+        "text": "Neighbour, 88, lives alone, has had bad diarrhoea for 3 days and is very weak",
+        "expected": "urgent",
+        "predicted": "routine",
+        "score": 33,
+        "result": "under-triage"
+      },
+      {
+        "text": "My son has a mild tummy ache after lunch, he is 8",
+        "expected": "self-care",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "over-triage"
+      }
+    ],
+    "rows": [
+      {
+        "text": "He has crushing chest pain going into his jaw",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "She is having a seizure right now",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "He fell down and now won't wake up properly",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "She has been clutching her chest and says it feels like an elephant is sitting on it",
+        "expected": "emergency",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "under-triage"
+      },
+      {
+        "text": "Grandmother's lips are turning blue and she is struggling for air",
+        "expected": "emergency",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "under-triage"
+      },
+      {
+        "text": "He drank a bottle of cleaning liquid",
+        "expected": "emergency",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "under-triage"
+      },
+      {
+        "text": "Dad is coughing and spitting blood",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "The baby is 3 weeks old, will not feed and feels warm",
+        "expected": "emergency",
+        "predicted": "emergency",
+        "score": 85,
+        "result": "match"
+      },
+      {
+        "text": "Mum has a temperature of 39 and is very confused",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 35,
+        "result": "match"
+      },
+      {
+        "text": "My father, 82, has not passed urine since yesterday morning",
+        "expected": "urgent",
+        "predicted": "urgent",
+        "score": 40,
+        "result": "match"
+      },
+      {
+        "text": "Neighbour, 88, lives alone, has had bad diarrhoea for 3 days and is very weak",
+        "expected": "urgent",
+        "predicted": "routine",
+        "score": 33,
+        "result": "under-triage"
+      },
+      {
+        "text": "She has been coughing for a week and is tired, she is 55",
+        "expected": "routine",
+        "predicted": "routine",
+        "score": 18,
+        "result": "match"
+      },
+      {
+        "text": "My son has a mild tummy ache after lunch, he is 8",
+        "expected": "self-care",
+        "predicted": "unclear",
+        "score": 0,
+        "result": "over-triage"
+      },
+      {
+        "text": "Everything is normal today, he ate well and slept well",
+        "expected": "self-care",
+        "predicted": "self-care",
+        "score": 0,
+        "result": "match"
+      }
+    ]
+  },
+  "matching": {
+    "queries": 11,
+    "top1": 11,
+    "top3": 11,
+    "top1Rate": 1,
+    "top3Rate": 1,
+    "rows": [
+      {
+        "query": "dementia care for my mother",
+        "expected": [
+          "Marga Doe"
+        ],
+        "top3": [
+          "Marga Doe (89)",
+          "Somchai P. (65)",
+          "Kittipong A. (63)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "my autistic child needs after school care",
+        "expected": [
+          "Ramin Jang"
+        ],
+        "top3": [
+          "Ramin Jang (86)",
+          "Pimchanok R. (65)",
+          "Supaporn N. (38)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "physiotherapy after a stroke",
+        "expected": [
+          "Malee S."
+        ],
+        "top3": [
+          "Malee S. (91)",
+          "Nattaya L. (37)",
+          "Marga Doe (21)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "wheelchair user needs daily help",
+        "expected": [
+          "Anan K."
+        ],
+        "top3": [
+          "Anan K. (78)",
+          "Wichai T. (44)",
+          "Malee S. (34)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "palliative care for my father with cancer",
+        "expected": [
+          "Wichai T."
+        ],
+        "top3": [
+          "Wichai T. (91)",
+          "Anan K. (31)",
+          "Malee S. (28)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "diabetes and wound dressing for an elderly relative",
+        "expected": [
+          "Somchai P."
+        ],
+        "top3": [
+          "Somchai P. (90)",
+          "Marga Doe (59)",
+          "Kittipong A. (53)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "newborn baby, need an overnight nanny",
+        "expected": [
+          "Pimchanok R."
+        ],
+        "top3": [
+          "Pimchanok R. (85)",
+          "Ramin Jang (66)",
+          "Marga Doe (54)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "paediatric nurse for a child with developmental delay",
+        "expected": [
+          "Supaporn N."
+        ],
+        "top3": [
+          "Supaporn N. (90)",
+          "Ramin Jang (36)",
+          "Nattaya L. (32)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "post surgery rehabilitation at home",
+        "expected": [
+          "Nattaya L."
+        ],
+        "top3": [
+          "Nattaya L. (67)",
+          "Malee S. (38)",
+          "Supaporn N. (35)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "ต้องการคนดูแลผู้สูงอายุสมองเสื่อม",
+        "expected": [
+          "Marga Doe"
+        ],
+        "top3": [
+          "Marga Doe (89)",
+          "Somchai P. (65)",
+          "Kittipong A. (63)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      },
+      {
+        "query": "night care for an elderly person",
+        "expected": [
+          "Somchai P.",
+          "Marga Doe",
+          "Malee S."
+        ],
+        "top3": [
+          "Marga Doe (89)",
+          "Somchai P. (66)",
+          "Malee S. (56)"
+        ],
+        "top1Hit": true,
+        "top3Hit": true
+      }
+    ]
+  },
+  "latency": {
+    "POST /api/match": {
+      "sequentialRequests": 300,
+      "p50Ms": 1.06,
+      "p95Ms": 2.37,
+      "p99Ms": 2.84,
+      "burst200Ms": 282
+    },
+    "POST /api/triage": {
+      "sequentialRequests": 300,
+      "p50Ms": 0.85,
+      "p95Ms": 2.06,
+      "p99Ms": 3,
+      "burst200Ms": 147
+    },
+    "GET /api/caregivers": {
+      "sequentialRequests": 300,
+      "p50Ms": 0.51,
+      "p95Ms": 0.83,
+      "p99Ms": 1.46,
+      "burst200Ms": 77
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OunJai Health Services — Care Made Easier</title>
+  <meta name="description" content="Find trusted caregivers for children, older adults and people with disabilities, with AI matching, booking, live tracking and emergency support.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main" class="container" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="pill">Trusted Elderly &amp; Family Care Platform</span>
+      <h1 id="hero-title">Care made easier, with OunJai</h1>
+      <p class="lead">One platform. Personalized care. Peace of mind. Bridging care system gaps in Thailand's Super-Aged Society.</p>
+
+      <div class="search-card">
+        <form id="search-form" class="search-row" role="search">
+          <label class="search-input">
+            <span class="sr-only">Describe your care needs</span>
+            <svg id="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="search-text" name="q" type="text" maxlength="500" placeholder="Describe your care needs (e.g., elderly care, rehabilitation)…" autocomplete="off">
+          </label>
+          <button class="btn" type="submit" id="find-btn">Find Care</button>
+        </form>
+
+        <div class="cat-row" role="group" aria-label="Categories">
+          <span>Categories:</span>
+          <span id="chips" class="row"></span>
+        </div>
+
+        <input type="file" id="file-input" class="sr-only" accept="image/png,image/jpeg,application/pdf" tabindex="-1">
+        <button type="button" class="upload-zone" id="upload-zone" aria-describedby="upload-help">
+          <span class="ico" id="upload-icon"></span>
+          <span>
+            <strong>Upload Medical Document / Photo for AI Analysis</strong>
+            <span id="upload-help">Supports PNG, JPG, or PDF health reports (max 5 MB). Files are analysed in memory and not stored.</span>
+          </span>
+        </button>
+
+        <details class="paste" id="paste-box" style="margin-top:.8rem">
+          <summary class="small" style="cursor:pointer;color:var(--primary-dark);font-weight:600">Or paste the key details of a report or care situation</summary>
+          <div class="stack" style="margin-top:.6rem">
+            <label class="sr-only" for="paste-text">Report or care situation text</label>
+            <textarea id="paste-text" class="input" maxlength="5000" placeholder="e.g. Grandmother, 74, early dementia, diabetes, recently fell and needs help walking"></textarea>
+            <button class="btn secondary sm" type="button" id="analyze-btn">Analyse text</button>
+          </div>
+        </details>
+        <div id="analysis-result"></div>
+      </div>
+    </section>
+
+    <section class="grid cols-3" style="margin-top:1.5rem" aria-label="Key features">
+      <article class="card feature">
+        <span class="ico" id="f1"></span>
+        <h3>AI Care Matching</h3>
+        <p class="muted">Recommends suitable caregivers based on care needs, location, and individual health conditions — with a transparent score you can inspect.</p>
+      </article>
+      <article class="card feature">
+        <span class="ico" id="f2"></span>
+        <h3>Live Care Tracking</h3>
+        <p class="muted">Real-time transit tracking and appointment scheduling keep families connected and assured.</p>
+      </article>
+      <article class="card feature">
+        <span class="ico" id="f3"></span>
+        <h3>Emergency Support</h3>
+        <p class="muted">Quick-access SOS and emergency contacts for vulnerable groups, helping to prevent isolated aging.</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:1.5rem" aria-labelledby="why">
+      <h2 id="why">Why OunJai exists</h2>
+      <div class="grid cols-3" style="margin-top:.8rem">
+        <div class="stat"><strong>14.49M</strong><span class="muted small">older adults in Thailand</span></div>
+        <div class="stat"><strong>22.4%</strong><span class="muted small">of the population</span></div>
+        <div class="stat"><strong>1.8M+</strong><span class="muted small">older adults living alone</span></div>
+      </div>
+      <p class="xsmall muted" style="margin-top:.8rem;text-align:center">Figures as cited in the OunJai project presentation (Thai PBS / The Active, Thairath).</p>
+    </section>
+
+    <section class="card" style="margin-top:1.5rem" aria-labelledby="how">
+      <h2 id="how">How OunJai works</h2>
+      <ol class="steps" style="list-style:none;padding:0;margin:.8rem 0 0">
+        <li class="step"><div><strong>Create an account</strong><p class="muted small">Register with basic information and accept the privacy notice.</p></div></li>
+        <li class="step"><div><strong>Search for services</strong><p class="muted small">Childcare, elderly care, disability support or rehabilitation.</p></div></li>
+        <li class="step"><div><strong>Find a suitable caregiver</strong><p class="muted small">Compare AI match scores, qualifications, availability and fees.</p></div></li>
+        <li class="step"><div><strong>Book a service</strong><p class="muted small">Choose the date, time and place and submit your request.</p></div></li>
+        <li class="step"><div><strong>Receive care and track</strong><p class="muted small">Follow the caregiver's arrival and use SOS if needed.</p></div></li>
+        <li class="step"><div><strong>Give feedback</strong><p class="muted small">Rate the service to help others and improve quality.</p></div></li>
+      </ol>
+    </section>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/js/pages/home.js"></script>
+</body>
+</html>

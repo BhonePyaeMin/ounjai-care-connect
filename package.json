@@ -1,0 +1,14 @@
+{
+  "name": "ounjai-care-connect",
+  "version": "1.0.0",
+  "description": "OunJai Health Services - care platform prototype (caregiver matching, AI triage, booking, live tracking, SOS, donations)",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test \"test/**/*.test.js\""
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy &amp; PDPA Notice — OunJai Health Services</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div id="app-header"></div>
+  <main id="main" class="container prose" tabindex="-1" style="max-width:46rem">
+    <h1>Privacy &amp; PDPA notice</h1>
+    <p class="muted">Prototype notice for the OunJai Health Services course project. Review with a qualified person before any real-world launch.</p>
+
+    <h2>What we collect and why</h2>
+    <ul>
+      <li><strong>Account:</strong> name, email, optional phone, password (stored only as a salted scrypt hash) - to run your account.</li>
+      <li><strong>Bookings:</strong> care recipient name and age, address, notes - to arrange and track care with the caregiver you choose.</li>
+      <li><strong>Emergency contacts:</strong> names and phone numbers you enter - to notify them when you press SOS.</li>
+      <li><strong>Health text</strong> you type into the assistant or paste for analysis: used to produce your answer and <em>not stored</em>. Only the resulting urgency level and score are logged, without any text or identity, to monitor service quality.</li>
+      <li><strong>Uploaded reports (PNG/JPG/PDF):</strong> processed in memory and not saved. Reading images and PDFs needs a vision model; if the operator enables one, the file is sent to that provider for transcription only.</li>
+    </ul>
+
+    <h2>Sensitive data</h2>
+    <p>Information about health is sensitive personal data under the PDPA. We ask for your explicit consent when you create an account, we collect the minimum needed, and you can ask us to erase your data at any time (below).</p>
+
+    <h2>How AI is used</h2>
+    <ul>
+      <li>Caregiver matching uses a transparent scoring formula (skills, service type, distance, rating, availability, experience, budget). You can see the breakdown for every caregiver.</li>
+      <li>Symptom guidance uses safety rules, not a diagnosis. Rules decide the urgency level; an optional language model may only rephrase the result and can never lower the urgency.</li>
+      <li>A human (you, your doctor, or the emergency service) always makes the final care decision.</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <p>You may access, correct, port or erase your data and withdraw consent. Erasure removes your account, bookings, feedback, contacts and alerts; donation records are kept without your identity.</p>
+
+    <div class="card" id="erase-card" style="margin-top:1.5rem">
+      <h2 style="margin-top:0">Delete my account and data</h2>
+      <p id="erase-gate" class="small muted"></p>
+      <form id="erase-form" class="stack hidden" novalidate>
+        <div class="field"><label for="e-pass">Confirm your password</label><input id="e-pass" class="input" type="password" autocomplete="current-password" required></div>
+        <p class="error-text" id="e-err" role="alert"></p>
+        <button class="btn danger" type="submit">Permanently delete my account</button>
+      </form>
+    </div>
+  </main>
+  <div id="app-footer"></div>
+  <script type="module" src="/js/pages/privacy.js"></script>
+</body>
+</html>
